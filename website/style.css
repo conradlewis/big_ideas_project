@@ -60,9 +60,10 @@
     border-radius:2%;
     margin:2%;
 }
-.rotate {
+/* .rotate 
+{
     transform: rotate(90deg);
-}
+} */
 
 #link a {
     font: 50 160% Georgia;
