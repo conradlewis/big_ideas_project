@@ -1,11 +1,20 @@
-h1 
+#header 
 {
     background-color: teal;
     text-align:center;
+    font:50 200% Georgia;
+    color:white;
+    position:relative;
+    width:50%;
+    height:150px;
+    margin:auto;
+    border-radius:10%;
+    padding:2%;
 }
 
 .brsmall
 {
+    position:relative;
     display: block; 
     margin-bottom: 5em; 
 }
