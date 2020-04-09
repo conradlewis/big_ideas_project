@@ -18,7 +18,7 @@
     text-align:center;
     margin:auto;
 }
-#contributerHeader {
+#contributorHeader {
     font: 50 190% Georgia;
     background-color:teal;
     color:white;
@@ -31,19 +31,19 @@
     margin-top:10%;
     
 }
-.contributer {
+.contributor {
     position:relative;
     margin:10%;
 }
 
-.contributer img 
+.contributor img 
 {
     border-radius:50%;
     height:200px;
     width:200px;
     border:10px solid teal;
 }
-.contributer p {
+.contributor p {
     font: 50 150% Georgia;
     color:teal;
     width:70%;
