@@ -1,7 +1,6 @@
-function swim()
+function swim(initPos)
 {
     var element = document.getElementById("fish1"); 
-    var pos = 0;
     var id = setInterval(frame, 5);
     function frame() 
     {
@@ -12,8 +11,8 @@ function swim()
         
         else 
         {
-            element.style.left = pos + 'px';
-            element.style.left = pos + 'px'; 
+            element.style.left = initPos + 'px';
+            element.style.left = initPos + 'px'; 
         }
     }
 }
