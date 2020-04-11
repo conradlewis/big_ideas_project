@@ -5,12 +5,14 @@ function moveRight(startPos)
     element.style.top = pos + 'px';
     
     var id = setInterval(frame, 5);
+    
     function frame() 
     {
         if (pos == 880) 
         {
             clearInterval(id);
         }
+        
         else 
         {
             pos++;
