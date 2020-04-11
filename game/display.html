@@ -22,7 +22,7 @@
 <body>
 
 <p>
-    <button onclick="move()">blub blub</button> 
+    <button onclick="moveRight()">blub blub</button> 
 </p>
 
 <div id="tank" style= "height: 100px; width: 200px;">
@@ -33,7 +33,7 @@
 </div>
 
 <script>
-function move() 
+function moveRight() 
 {
     var element = document.getElementById("fish1");   
     var pos = 30;
@@ -43,10 +43,11 @@ function move()
     
     function frame() 
     {
-        if (pos == 880) 
+        if (pos == 880)
         {
             clearInterval(id);
-        } 
+        }
+ 
         else 
         {
             pos++; 
