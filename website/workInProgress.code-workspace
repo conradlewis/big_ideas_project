@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "/Users/conrad/Desktop/html"
+		},
+		{
+			"name": "big_ideas_project",
+			"path": "/Users/conrad/big_ideas_project"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "big_ideas_project"
+	}
+}
