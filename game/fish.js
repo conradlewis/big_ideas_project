@@ -2,6 +2,7 @@ function moveRight()
 {
     var element = document.getElementById("fish1");   
     var pos = 30;
+
     element.style.top = pos + 'px';
 
     var id = setInterval(frame, 5);
