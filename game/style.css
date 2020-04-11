@@ -1,0 +1,10 @@
+#container 
+{
+    width: 800px;
+    position: relative;
+}
+#fish1
+{
+    height: 400px;
+    position: absolute;
+}
