@@ -4,57 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch Him Go!!!</title>
-
+    <link rel="stylesheet" href="style.css">
 <style>
-#tank
-{
-  position: relative;
-  
-}
-#fish1 
-{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-}
+
 
 </style>
 <body>
 
 <p>
-    <button onclick="moveRight()">blub blub</button> 
+    <button onclick="moveRight(30)">blub blub</button> 
 </p>
 
 <div id="tank" style= "height: 100px; width: 200px;">
     <img src="images/fishtank.jpg">
-<div id ="fish1">
-    <img src="images/poisson.PNG" alt="fish1">
+<div id ="fish">
+    <img src="images/poisson.PNG" id="fish1">
+    <img src="images/lessDetailedButStillEquallyImportantFish.PNG" alt ="fish2">
 </div>
 </div>
 
-<script>
-function moveRight() 
-{
-    var element = document.getElementById("fish1");   
-    var pos = 30;
-    element.style.top = pos + 'px';
-
-    var id = setInterval(frame, 5);
-    
-    function frame() 
-    {
-        if (pos == 880)
-        {
-            clearInterval(id);
-        }
- 
-        else 
-        {
-            pos++; 
-            element.style.left = pos + 'px'; 
-        }
-    }
-}
+<script src= "fish.js">
+    var fishList = [];
+    fishList[0] = document.getElementById("fish1");
+    fishList
 </script>
 
 </body>
