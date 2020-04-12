@@ -1,3 +1,8 @@
+body
+{
+  background-color: teal
+}
+
 #tank
 {
   position: relative;
@@ -8,9 +13,14 @@
   position: absolute;
 }
 
+.fish img
+{
+  width: 90px;
+}
+
 #fish1
 {
-  top: "70px";
+  top: 70px;
 }
 
 #fish2
