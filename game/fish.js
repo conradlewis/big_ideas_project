@@ -32,6 +32,9 @@ function moveToMouse(fishID, mouseX, mouseY)
     var element = document.getElementById(fishID);
     if (element.style.top == "")
         element.style.top = "360px";
+
+    if (element.style.top == "")
+        element.style.left = "6px";
     
     var topBottomPos = parseInt(element.style.top);
     var leftRightPos = parseInt(element.style.left);
@@ -51,6 +54,7 @@ function moveToMouse(fishID, mouseX, mouseY)
         if(leftRightPos < mouseX && leftRightPos <= 940)
         {
             leftRightPos += 1;
+            element.style.transform = 'scaleX(-1)';
         }
         else if(leftRightPos > mouseX && leftRightPos >= 5)
         {
