@@ -40,23 +40,19 @@ function moveToMouse(fishID, mouseX, mouseY)
     
     function frame() 
     {
-        if(topBottomPos < mouseY) 
-        {
+        if(topBottomPos < mouseY && topBottomPos <= 530) 
             topBottomPos += 1;
-        }
-        else if(topBottomPos > mouseY)
-        {
+        else if(topBottomPos > mouseY && topBottomPos >= 0)
             topBottomPos -= 1;
-        }
         
         element.style.top = topBottomPos + 'px';
         
-        if(leftRightPos < mouseX)
+        if(leftRightPos < mouseX && leftRightPos <= 940)
         {
             leftRightPos += 1;
             element.style.transform = 'scaleX(1)';
         }
-        else if(leftRightPos > mouseX)
+        else if(leftRightPos > mouseX && leftRightPos >= 5)
         {
             leftRightPos -= 1;
             element.style.transform = 'scaleX(-1)';
