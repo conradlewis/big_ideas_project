@@ -24,8 +24,8 @@ function move(startPos, endPos, fishID)
         element.style.left = pos + 'px';
     }
 }
-// move(5, 940, "fish1");
 move(5, 940, 'fish2');
+move(5, 940, 'fish1');
 
 function moveToMouse(fishID, mouseX, mouseY)
 {
