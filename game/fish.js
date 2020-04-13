@@ -25,11 +25,14 @@ function move(startPos, endPos, fishID)
     }
 }
 // move(5, 940, "fish1");
-move(5, 940, "fish2");
+move(5, 940, 'fish2');
 
 function moveToMouse(fishID, mouseX, mouseY)
 {
     var element = document.getElementById(fishID);
+    if (element.style.top == "")
+        element.style.top = "360px";
+    
     var topBottomPos = parseInt(element.style.top);
     var leftRightPos = parseInt(element.style.left);
     
@@ -45,9 +48,10 @@ function moveToMouse(fishID, mouseX, mouseY)
         {
             topBottomPos -= 1;
         }
+        
         element.style.top = topBottomPos + 'px';
         
-        if(leftRigtPos < mouseX)
+        if(leftRightPos < mouseX)
         {
             leftRightPos += 1;
             element.style.transform = 'scaleX(1)';
@@ -57,14 +61,25 @@ function moveToMouse(fishID, mouseX, mouseY)
             leftRightPos -= 1;
             element.style.transform = 'scaleX(-1)';
         }
-        element.style.left = pos + 'px';
+        
+        element.style.left = leftRightPos + 'px';
     }
 }
+
 //mouse clicking works; moveToMouse doesn't
-document.addEventListener('click', function printMousePos(event) {
-            var x = event.clientX;
-            var y = event.clientY; 
-            alert('x: ' + x);
-            alert('y: ' + y);
-            moveToMouse('fish1', x, y);
-        });
+document.addEventListener('click', function printMousePos(event) 
+{
+    var x = event.clientX;
+    var y = event.clientY; 
+    // alert('x: ' + x);
+    // alert('y: ' + y);
+    moveToMouse("fish2", x, y);
+});
+
+function parse(string)
+{
+    var i = 0;
+    while (!(string.substring(i, i + 1) === "p"))
+        i++;
+    return string.substring(0, i);
+}
