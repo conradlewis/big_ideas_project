@@ -24,7 +24,7 @@ function move(startPos, endPos, fishID)
         element.style.left = pos + 'px';
     }
 }
-move(5, 940, 'fish2');
+// move(5, 940, 'fish2');
 move(5, 940, 'fish1');
 
 function moveToMouse(fishID, mouseX, mouseY)
@@ -46,11 +46,11 @@ function moveToMouse(fishID, mouseX, mouseY)
             topBottomPos -= 1;
         
         element.style.top = topBottomPos + 'px';
+        element.style.left = "0px";
         
         if(leftRightPos < mouseX && leftRightPos <= 940)
         {
             leftRightPos += 1;
-            element.style.transform = 'scaleX(1)';
         }
         else if(leftRightPos > mouseX && leftRightPos >= 5)
         {
