@@ -43,35 +43,26 @@ function moveToMouse(fishID, mouseX, mouseY)
 
     function frame() 
     {
-        const HALF_FISH_HEIGHT = 0;
-
-        // The middle of the fish should hit the cursor, not the top. Adding half of the fish's height to the starting position solves this.
-        //deleted HALF_FISH_HEIGHT for now
-        if(topBottomPos + HALF_FISH_HEIGHT < mouseY && topBottomPos <= 530) 
+        if(topBottomPos < mouseY && topBottomPos <= 530) 
             topBottomPos += 1;
-        else if(topBottomPos + HALF_FISH_HEIGHT > mouseY && topBottomPos >= 0)
+        else if(topBottomPos > mouseY && topBottomPos >= 0)
             topBottomPos -= 1;
-        else if(topBottomPos + HALF_FISH_HEIGHT == mouseY)
-            clearInterval(id);
         element.style.top = topBottomPos + 'px';
         // element.style.left = "0px";
         
-        const FISH_LENGTH = 0;
+        const FISH_LENGTH = 80;
 
-        // The fish's face, not its tail, should hit the cursor when moving forward. Subtracting the length of the fish from the intended X destination solves this.  
-        //deleted FISH_LENGTH for now
-        if(leftRightPos - FISH_LENGTH < mouseX && leftRightPos <= 940)
+        // Makes the fish's face, not its tail, hit the cursor
+        if(leftRightPos + FISH_LENGTH < mouseX && leftRightPos <= 940)
         {
             leftRightPos += 1;
             element.style.transform = 'scaleX(1)';
         }
-        else if(leftRightPos - FISH_LENGTH > mouseX && leftRightPos >= 5)
+        else if(leftRightPos > mouseX && leftRightPos >= 5)
         {
             leftRightPos -= 1;
             element.style.transform = 'scaleX(-1)';
         }
-        else if(leftRightPos - FISH_LENGTH == mouseX)
-            clearInterval(id);
         
         element.style.left = leftRightPos + 'px';
     }
