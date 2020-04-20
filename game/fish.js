@@ -28,7 +28,7 @@ function move(startPos, endPos, fishID)
 move(5, 940, 'fish1');
 var direction = 1;
 
-function moveToMouse(fishID, mouseX, mouseY)
+function moveToSpot(fishID, x, y)
 {
     var element = document.getElementById(fishID);
     var id = setInterval(frame, 5);
@@ -43,9 +43,9 @@ function moveToMouse(fishID, mouseX, mouseY)
 
     function frame() 
     {
-        if(topBottomPos < mouseY && topBottomPos <= 530) 
+        if(topBottomPos < y && topBottomPos <= 530) 
             topBottomPos += 1;
-        else if(topBottomPos > mouseY && topBottomPos >= 0)
+        else if(topBottomPos > y && topBottomPos >= 0)
             topBottomPos -= 1;
         element.style.top = topBottomPos + 'px';
         // element.style.left = "0px";
@@ -53,12 +53,12 @@ function moveToMouse(fishID, mouseX, mouseY)
         const FISH_LENGTH = 80;
 
         // Makes the fish's face, not its tail, hit the cursor
-        if(leftRightPos + FISH_LENGTH < mouseX && leftRightPos <= 940)
+        if(leftRightPos + FISH_LENGTH < x && leftRightPos <= 940)
         {
             leftRightPos += 1;
             element.style.transform = 'scaleX(1)';
         }
-        else if(leftRightPos > mouseX && leftRightPos >= 5)
+        else if(leftRightPos > x && leftRightPos >= 5)
         {
             leftRightPos -= 1;
             element.style.transform = 'scaleX(-1)';
@@ -74,7 +74,7 @@ document.addEventListener('click', function printMousePos(event)
     var y = event.clientY; 
     // alert('x: ' + x);
     // alert('y: ' + y);
-    moveToMouse("fish2", x, y);
+    moveToSpot("fish2", x, y);
 });
 
 // function parse(string)

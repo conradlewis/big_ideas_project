@@ -13,6 +13,11 @@ body
   position: absolute;
 }
 
+/* .healthbar
+{
+  position: absolute;
+} */
+
 .fish img
 {
   width: 90px;
@@ -26,4 +31,11 @@ body
 #fish2
 {
   top: 360px;
+}
+
+#fishFood img
+{
+  width: 70px;
+  position: absolute;
+  top: 200px;
 }
