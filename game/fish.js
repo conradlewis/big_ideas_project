@@ -24,6 +24,7 @@ function move(startPos, endPos, fishID) {
 }
 // move(5, 940, 'fish2');
 move(5, 940, "fish1");
+shakeFishFood();
 var direction = 1;
 
 function moveToSpot(fishID, x, y) {
@@ -71,3 +72,14 @@ document.addEventListener("click", function printMousePos(event) {
     moveToSpot("fish2", x, y);
   }
 });
+
+function shakeFishFood()
+{
+    var food = document.getElementById("fishFood");
+    var id = setInterval(frame, 5);
+
+    function frame()
+    {
+        food.style.rotate(90);
+    }
+}
