@@ -70,11 +70,15 @@ function moveToSpot(fishID, x, y)
 
 document.addEventListener('click', function printMousePos(event) 
 {
-    var x = event.clientX;
-    var y = event.clientY; 
-    // alert('x: ' + x);
-    // alert('y: ' + y);
-    moveToSpot("fish2", x, y);
+    while (moving == false && event.clientX < 940 && event.clientY < 530) 
+    {
+        //   clearInterval(id);
+        var x = event.clientX;
+        var y = event.clientY;
+        // alert('x: ' + x);
+        // alert('y: ' + y);
+        moveToSpot("fish2", x, y);
+      }
 });
 
 // function parse(string)
