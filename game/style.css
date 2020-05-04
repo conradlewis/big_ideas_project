@@ -18,9 +18,24 @@ body
   width: 100px;
 }
 
-.fishFood img
+#moss
+{
+  position: absolute;
+  top: 30px;
+}
+
+#moss img
 {
   width: 120px;
+}
+
+#fishFood
+{
   position: absolute;
   top: 10px;
+}
+
+#fishFood img
+{
+  width: 50px;
 }
