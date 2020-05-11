@@ -32,7 +32,8 @@ body
 #fishFood
 {
   position: absolute;
-  top: 10px;
+  top: 100px;
+  left: 1200px;
 }
 
 #fishFood img

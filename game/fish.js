@@ -73,3 +73,8 @@ document.addEventListener('click', function mouseClicked(event)
     else
     	document.getElementById("fish1").style.transform = 'scaleX(1)';
 });
+
+function eatFood()
+{
+	
+}

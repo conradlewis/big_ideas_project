@@ -1,0 +1,11 @@
+Objectives:
+ * for fishFood, make image foodBit that comes out of container
+    - we (i.e. Jamie + Ryan) can make two or three different shapes for the foodBits so that the animation looks more authentic
+
+ * make function dragContainer that allows the user to drag fishFood from the right side of the screen into (over?) the tank
+    - also, finish function shakeFood so that the animation is less freaky
+
+ * make function produceFood (in fishFood) that clones foodBits and makes them fall from the container
+
+ * in fish class, make function eatFood that lets fish eat foodBits
+    - when fish touches foodBit, its mouth opens and the foodBit disappears

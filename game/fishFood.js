@@ -1,3 +1,15 @@
+var angle = 90;
+setInterval(frame, 5)
+var elem = document.getElementById("fishFood");
+elem.ondrag = produceFood();
+
+function frame()
+{
+   
+    elem.style.transform = "rotate(" + angle + "deg";
+    angle = (angle + 0.25) % 360;
+}
+
 document.addEventListener('click', function mouseClicked(event) 
 {
     shakeFood();
@@ -5,6 +17,15 @@ document.addEventListener('click', function mouseClicked(event)
 
 function shakeFood()
 {
-    var elem = document.getElementById("fishFood");
-    elem.style.top = "10px";
+    
+}
+
+function dragContainer()
+{
+
+}
+
+function produceFood()
+{
+
 }
